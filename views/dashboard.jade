@@ -1,0 +1,15 @@
+extends layout
+.nav
+  block nav
+      ul.main-menu
+        li
+          a(href='/') Home
+        li
+          a(href='/showdb') My Databases
+block main-content
+p #{msg}
+block form 
+    form(action="/createdb" method="post")
+        label Name
+        input(type="text" name="name" placeholder="Your database name here!")
+        input(type="submit" name="submit" value="Submit")

@@ -1,0 +1,20 @@
+extends index
+.nav
+	block nav
+		ul.main-menu
+			li
+				a(href="/") Home
+block main-content
+	p(style="color: rgb(32, 24, 44); font-weight: bold;") #{msg}
+block form
+	form(method="post", id="registerform", action="/register")
+		p
+			label Username
+			input(type='text', id='username', name='username')
+		p
+			label Password
+			input(type='text', id='password', name='password')
+		p
+			input(type='Submit')
+
+	

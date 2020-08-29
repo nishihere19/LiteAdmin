@@ -1,0 +1,21 @@
+extends layout
+.nav
+  block nav
+      ul.main-menu
+        li
+          a(href='/') Home
+        li
+          a(href='/showdb') My Databases
+block form 
+  form(action="/add", method="post")
+    input(type="text" name="table" value=table style="display: none;")
+    input(type="text" name="no_of_col" value=no_of_col style="display: none;")
+    input(type="text" name="db" value=db style="display: none;")
+    input(type="text" name="num" value=num[num.length-1] style="display: none;")
+    each item in num
+        each items in result
+            label #{items.name}
+            input(type="text" name=item+items._id placeholder="Data")
+    input(type="submit" name="submit" value="Submit")
+
+        

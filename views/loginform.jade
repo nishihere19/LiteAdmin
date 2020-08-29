@@ -1,0 +1,19 @@
+extends layout
+.nav
+	block nav
+		ul.main-menu
+			li
+				a(href="/") Home
+
+block form
+	form(method="post", id="loginform", action="/login")
+		p
+			label Username
+			input(type='text', id='username', name='username')
+		p
+			label Password
+			input(type='password', id="password", name='password')
+		p
+			input(type='Submit')
+
+	

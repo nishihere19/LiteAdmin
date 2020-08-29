@@ -1,0 +1,16 @@
+extends layout
+.nav
+  block nav
+      ul.main-menu
+        li
+          a(href='/') Home
+        li
+          a(href='/logout') Logout
+        
+  
+block main-content
+  table
+    each item in result
+      tr
+        td
+          a(href="/showtablesdata/"+item._id+"/"+item.dbname style="float: left;") #{item.name}
