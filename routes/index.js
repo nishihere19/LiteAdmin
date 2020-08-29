@@ -324,7 +324,7 @@ router.post('/add',function(req,res,next){
 							if(err) console.log(err);
 							else{
 								console.log(result);
-								if(j==result.length-1 && i==num-1){
+								if((j==result.length-1) && (i==num-1)){
 									res.render('dashboard',{msg: "Data Added!"});
 									return;
 								}
@@ -375,6 +375,31 @@ router.get("/deletedb/:id",(req,res,next)=>{
 		}
 	})
 })
+router.get("/deletetable/:id",(req,res,next)=>{
+	
+
+			tables.find({_id: req.params.id},(err,deleted)=>{
+				if(err) console.log(err);
+				else{
+					
+						column.remove({username: req.session.user.username, tablename: deleted[0].name,dbname: deleted[0].name},(err,result)=>{
+							if(err) console.log(err);
+							else{
+								console.log(result);
+
+							}
+						})
+						tables.deleteOne({_id: deleted[0]._id},(err,result)=>{
+							if(err) console.log(err);
+							else{
+								console.log(result);
+								res.render('dashboard', {msg: "table deleted!"});
+							}
+						})
+					
+				}
+			})
+		})
 module.exports = router;
 
 /*
