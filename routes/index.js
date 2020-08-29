@@ -183,6 +183,7 @@ router.post('/createCol',(req,res,next)=>{
 							})
 							if(i==no_of_col-1){
 								res.render('dashboard',{msg: "Table Created!"});
+								return;
 							}
 						}
 					})
@@ -325,6 +326,7 @@ router.post('/add',function(req,res,next){
 								console.log(result);
 								if(j==result.length-1 && i==num-1){
 									res.render('dashboard',{msg: "Data Added!"});
+									return;
 								}
 								
 							}

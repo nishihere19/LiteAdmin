@@ -12,7 +12,7 @@ body {
   background-position: center;
 
   background-color: rgb(199, 198, 198);
-  color: rgb(59, 51, 51);
+  color: rgb(27, 25, 25);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -121,6 +121,9 @@ input[type="submit"]:active {
   .nav ul li:hover .submenu:hover{
     display: block;
   }
-  
+  .data tr td span{
+    margin: 5px;
+    color: black;
+  }
   
   
