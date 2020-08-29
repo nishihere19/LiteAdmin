@@ -14,17 +14,19 @@ block form
     each item in number
       table
         tr  
-          td
+          td(style="float: left;")
+            label Name Of Column
             input(type="text" name=item+"name" placeholder="name of column")
         tr
-          td
+          td(style="float: left;")
             label Foreign Key(Optional)
             input(type="text" name=item+"table" placeholder="Name of Table")
         tr
-          td
+          td(style="float: left;")
+            label Name of Column(Foreign Key)
             input(type="text" name=item+"col" placeholder="Name of Column")
         tr
-          td
+          td(style="float: left;")
             label(for=item+"checkbox_unique") unique
             input(type="checkbox" name=item+"checkbox_unique")
     input(type="submit" name="submit" value="Submit" style="float: left")

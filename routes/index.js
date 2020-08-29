@@ -181,10 +181,7 @@ router.post('/createCol',(req,res,next)=>{
 									console.log(result);
 								}
 							})
-							if(i==no_of_col-1){
-								res.render('dashboard',{msg: "Table Created!"});
-								return;
-							}
+							
 						}
 					})
 				}
@@ -202,15 +199,14 @@ router.post('/createCol',(req,res,next)=>{
 							console.log(result1);
 						}
 					})
-					if(i==no_of_col-1){
-						res.render('dashboard',{msg: "Table Created!"});
-					}
 				}
 			})
 		}
 
 		
 	}
+	res.render('dashboard',{msg: "Table Created!"});
+	return;
 	/*
 	'1name': 'id',
   '1table': '',

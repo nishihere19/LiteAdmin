@@ -13,7 +13,7 @@ block main-content
                 each items in item.rows
                     td
                         span=items
-    form(method="post" action="/addData")
+    form(method="post" action="/addData" style="float: left;")
         input(type="text" name="dbname" value=result[0].dbname style="display: none;")
         input(type="text" name="tablename" value=result[0].tablename style="display: none;")
         input(type="text" name="no_of_col"  placeholder="No. of rows you want to add")
